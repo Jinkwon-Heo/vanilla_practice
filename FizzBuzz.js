@@ -10,5 +10,5 @@ for(i=1; i<101; i++){ //for문으로 1~100까지 찍어준다.
         console.log("Buzz");
         continue;
     }
-    console.log(i); //3의 배수와 5의 배수를 제외한 숫자를 찍어준다. 
+    console.log(i); //3의 배수와 5의 배수를 제외한 숫자를 찍어준다.  
 }
