@@ -114,7 +114,7 @@ console.log('after for loop');
 
 
 Exercise
-1. FizzBuzz
+1. FizzBuzz 
 아이디어
 1) 1~100까지 출력은 for문으로 작성
 2) 3의 배수와 5의 배수에서 출력되는 문자는 for문 안에 if문을 사용해서 작성. 조건식은 3과 5로 나누어서 나머지가 0이 되면 true가 되도록.
