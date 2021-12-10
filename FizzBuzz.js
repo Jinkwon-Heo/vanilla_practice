@@ -13,4 +13,4 @@ for(i=1; i<101; i++){
     console.log(i);
 }
 
-//continue문을 통해 3의배수와 5의배수의 수를 출력시키지 않고 fizz buzz만을 출력이 가능해졌다. 
+//continue문을 통해 3의배수와 5의배수의 수를 출력시키지 않고 fizz buzz만을 출력이 가능해졌다.
