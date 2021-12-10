@@ -19,4 +19,4 @@ for(i=0; i<sentence.length; i++){ //senctence의 처음부터 마지막까지 se
 
 console.log(head, tail); //출력
 
-//i와 j를 이용해서 각각의 for문이 같은 인덱스를 비교할 수 있도록 하였다. 비교를 반복하면서 계속 같은 글자가 나타난다면 head, tail변수에 저장. 
+//i와 j를 이용해서 각각의 for문이 같은 인덱스를 비교할 수 있도록 하였다. 비교를 반복하면서 계속 같은 글자가 나타난다면 head, tail변수에 저장.
