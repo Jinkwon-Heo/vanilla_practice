@@ -6,10 +6,11 @@ for(let i=0; i<5; i++){
 var number = 0;
 const $div = document.getElementsByTagName("div");
 const $getimage = document.getElementsByTagName("img");
+const $input = document.getElementsByTagName("input");
 
 $div[0].addEventListener("click", function onClick(ev){
     if(ev.target.tagName === "IMG"){
-        alert("123123");
+        return;
     }
     else if(ev.target.className === "mainbutton_left"){
         number -= 1;
@@ -26,3 +27,25 @@ $div[0].addEventListener("click", function onClick(ev){
         }else {$getimage[0].src = `./images/${images[number]}`};
     }
 });
+
+$input[0].addEventListener("click", function Click(ev){
+    number = 0;
+    $getimage[0].src = `./images/${images[number]}`;
+});
+$input[1].addEventListener("click", function Click(ev){
+    number = 1;
+    $getimage[0].src = `./images/${images[number]}`;
+});
+$input[2].addEventListener("click", function Click(ev){
+    number = 2;
+    $getimage[0].src = `./images/${images[number]}`;
+});
+$input[3].addEventListener("click", function Click(ev){
+    number = 3;
+    $getimage[0].src = `./images/${images[number]}`;
+});
+$input[4].addEventListener("click", function Click(ev){
+    number = 4;
+    $getimage[0].src = `./images/${images[number]}`;
+});
+//이 부분 반복문으로 짧게 할 수 있을 것 같은데.. 생각해보자
