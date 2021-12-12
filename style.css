@@ -1,0 +1,21 @@
+.box{
+    text-align: center;
+}
+
+.subbutton{
+    text-align: center;
+}
+button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0px;
+    background-color: whitesmoke;
+    opacity: 0.2;
+    position: relative;
+    top: -150px;
+}
+
+button:hover{
+    opacity: 1;
+}
