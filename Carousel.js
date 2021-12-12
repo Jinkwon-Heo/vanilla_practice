@@ -17,14 +17,16 @@ $div[0].addEventListener("click", function onClick(ev){
         if(number === -1){
             number = 4;
             $getimage[0].src = `./images/${images[number]}`;
-        }else {$getimage[0].src = `./images/${images[number]}`};
+            $input[number].checked = "checked";
+        }else {$getimage[0].src = `./images/${images[number]}`; $input[number].checked = "checked";};
     }
     if(ev.target.className === "mainbutton_right"){
         number += 1;
         if(number === 5){
             number = 0;
             $getimage[0].src = `./images/${images[number]}`;
-        }else {$getimage[0].src = `./images/${images[number]}`};
+            $input[number].checked="checked";
+        }else {$getimage[0].src = `./images/${images[number]}`; $input[number].checked = "checked";};
     }
 });
 
