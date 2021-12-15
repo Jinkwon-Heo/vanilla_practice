@@ -10,7 +10,7 @@ button.addEventListener("click", function buttonclick() {
         hex_color += hex[Math.floor(Math.random()*hex.length)];
         console.log(hex_color);
         $span.textContent = "HEX COLOR: " + hex_color;
-        $html.style = `background-color: #${hex_color}`;
+        $html.style = `background-color: #${hex_color}`; //벡틱을 이용한 문자열에 변수 넣기
     };
     hex_color = "";
 });
