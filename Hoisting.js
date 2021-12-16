@@ -23,3 +23,5 @@ var secret = {
   
   console.log(secret); // ?
   console.log(stuff); //에러
+
+  
