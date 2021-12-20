@@ -8,7 +8,7 @@ function Muppet(age, hobby) {
 }
 
 function SwedishChef(age, hobby, mood) {
-  Muppet.call(this, age, hobby);
+  Muppet.call(this, age, hobby);  //.call()메서드는 주어진 this값 및 각각 전달된 인수와 함께 함수를 호출한다. 여기서 this는 현재 객체(호출하는 객체, MUppet)를 참조한다.
   this.mood = mood;
 
   this.cook = function() {
@@ -24,21 +24,21 @@ describe("About inheritance", function() {
 	this.swedishChef = new SwedishChef(2, "cooking", "chillin");
   });
 
-  it("should be able to call a method on the derived object", function() {
-    expect(this.swedishChef.cook()).toEqual(FILL_ME_IN);
+  it("should be able to call a method on the derived object", function() { //derived object : 파생된 객체 (여기서는 SwedishChef가 Muppet으로부터 만들어졌으므로 파생이라고 표현한 듯)
+    expect(this.swedishChef.cook()).toEqual("Mmmm soup!");
   });
 
-  it("should be able to call a method on the base object", function() {
-    expect(this.swedishChef.answerNanny()).toEqual(FILL_ME_IN);
+  it("should be able to call a method on the base object", function() { //베이스 객체(여기서는 Muppet객체)의 메서드도 호출할 수 있다.
+    expect(this.swedishChef.answerNanny()).toEqual("Everything's cool!");
   });
 
-  it("should set constructor parameters on the base object", function() {
-    expect(this.swedishChef.age).toEqual(FILL_ME_IN);
-    expect(this.swedishChef.hobby).toEqual(FILL_ME_IN);
+  it("should set constructor parameters on the base object", function() { //base 객체에는 생성자 파라미터를 set해야한다.
+    expect(this.swedishChef.age).toEqual(2);
+    expect(this.swedishChef.hobby).toEqual("cooking");
   });
 
   it("should set constructor parameters on the derived object", function() {
-    expect(this.swedishChef.mood).toEqual(FILL_ME_IN);
+    expect(this.swedishChef.mood).toEqual("chillin");
   });
 });
 
@@ -67,19 +67,19 @@ describe("About Crockford's inheritance improvement", function() {
   });
 
   it("should be able to call a method on the derived object", function() {
-    expect(this.gonzo.doTrick()).toEqual(FILL_ME_IN);
+    expect(this.gonzo.doTrick()).toEqual("eat a tire");
   });
 
   it("should be able to call a method on the base object", function() {
-    expect(this.gonzo.answerNanny()).toEqual(FILL_ME_IN);
+    expect(this.gonzo.answerNanny()).toEqual("Everything's cool!");
   });
 
   it("should set constructor parameters on the base object", function() {
-    expect(this.gonzo.age).toEqual(FILL_ME_IN);
-    expect(this.gonzo.hobby).toEqual(FILL_ME_IN);
+    expect(this.gonzo.age).toEqual(3);
+    expect(this.gonzo.hobby).toEqual("daredevil performer");
   });
 
   it("should set constructor parameters on the derived object", function() {
-    expect(this.gonzo.trick).toEqual(FILL_ME_IN);
+    expect(this.gonzo.trick).toEqual("eat a tire");
   });
 });

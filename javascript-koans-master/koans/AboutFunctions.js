@@ -52,32 +52,32 @@ describe("About Functions", function() {
     var mysteryFunction3 = makeMysteryFunction(3);
     var mysteryFunction5 = makeMysteryFunction(5);
 
-    expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(23);
+    expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(23); //여기서 doMysteriousThing함수가 어떻게 호출되는지 잘 이해가 안됐다. 이 때 mysteryfunction3변수 뒤에 console.log를 통해 어떻게 함수가 호출되는지 확인할 수 있었다.
   });
 
-  it("should allow extra function arguments", function () {
+  it("should allow extra function arguments", function () { //arguments: 인자
 
     function returnFirstArg(firstArg) {
       return firstArg;
     }
 
-    expect(returnFirstArg("first", "second", "third")).toBe(FILL_ME_IN);
+    expect(returnFirstArg("first", "second", "third")).toBe("first");
 
     function returnSecondArg(firstArg, secondArg) {
       return secondArg;
     }
 
-    expect(returnSecondArg("only give first arg")).toBe(FILL_ME_IN);
+    expect(returnSecondArg("only give first arg")).toBe(undefined);
 
     function returnAllArgs() {
       var argsArray = [];
       for (var i = 0; i < arguments.length; i += 1) {
         argsArray.push(arguments[i]);
       }
-      return argsArray.join(",");
+      return argsArray.join(","); //.join: 배열의 모든 요소를 연결해 하나의 문자열로 만든다.
     }
 
-    expect(returnAllArgs("first", "second", "third")).toBe(FILL_ME_IN);
+    expect(returnAllArgs("first", "second", "third")).toBe("first,second,third");
   });
 
   it("should pass functions as values", function () {
@@ -91,10 +91,10 @@ describe("About Functions", function() {
     };
 
     var praiseSinger = { givePraise: appendRules };
-    expect(praiseSinger.givePraise("John")).toBe(FILL_ME_IN);
+    expect(praiseSinger.givePraise("John")).toBe("John rules!");
 
     praiseSinger.givePraise = appendDoubleRules;
-    expect(praiseSinger.givePraise("Mary")).toBe(FILL_ME_IN);
+    expect(praiseSinger.givePraise("Mary")).toBe("Mary totally rules!");
 
   });
 });
