@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            .center{
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                top: 75%;
+                font-size: 20px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .result{
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                top: 50%;
+                font-size: 20px;
+            }
+            .start{
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                top: 20%;
+                font-size: 40px;
+            }
+            .inputDiv{
+                display: none;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                top: 50%;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <input type="button" id="startbutton" class="content" value ="플레이볼" style= "padding: 30px; font-size:20px; border-radius: 5px">
+        </div>
+        <div>
+            <span class="start"></span>
+            <span class="result"></span>
+        </div>
+        <div class="inputDiv">
+            <input type="text" id="numberinput" size="5" display="none">
+        </div>
+        <!-- <table class= "table">
+            <caption>기록</caption>
+            <thead>
+                <tr align="center" bgcolor="white"></tr>
+                    <td></td>
+                    <th>입력</th>
+                    <th>스트라이크</th>
+                    <th>볼</th>
+            </thead>
+            <tbody></tbody>
+        </table> -->
+    </body>
+    <script type="text/javascript" src="Number_Baseball.js">
+    </script>
+</html>
