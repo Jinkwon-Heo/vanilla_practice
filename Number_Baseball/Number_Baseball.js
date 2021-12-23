@@ -162,7 +162,10 @@ numberinput.addEventListener("keypress", function pressenter(e){
                             if(gen_number[i] === user_number[j]){
                                 strike++;
                                 if(strike ===3){
-                                    alert("3스트라이크! 축하합니다");
+                                    // alert("3스트라이크! 축하합니다");
+                                    // const addresult = document.createElement("li");
+                                    // addresult.textContent = `${count+1}회 | 입력 된 숫자 = ${user_number} 생성 된 숫자 = ${gen_number}|| ${strike}스트라이크!`;
+                                    // document.body.appendChild(addresult);
                                     inputDiv.style.display = "none";
                                     restartbutton.style.display = "inline-block";
                                 }
@@ -174,14 +177,23 @@ numberinput.addEventListener("keypress", function pressenter(e){
                         }
                     }
                 }
+                if(strike !==3){
                 const addresult = document.createElement("li");
-                addresult.textContent = `${count+1}회 | 입력 된 숫자 = ${user_number} 생성 된 숫자 = ${gen_number}|| ${strike}스트라이크 ${ball}볼    !`;
+                addresult.textContent = `${count+1}회 | 입력 된 숫자 = ${user_number} || ${strike}스트라이크 ${ball}볼    !`;
                 document.body.appendChild(addresult);
                 console.log(count);
                 numberinput.value = "";
                 count++;
+                }else if(strike === 3){                                    
+                    alert("***** 3스트라이크! 축하합니다 *****");
+                const addresult = document.createElement("li");
+                addresult.textContent = `${count+1}회 | 입력 된 숫자 = ${user_number} 생성 된 숫자 = ${gen_number}|| ${strike}스트라이크! 게임을 재시작해주세요!`;
+                document.body.appendChild(addresult);}
                 if(count===10){
                     alert("10회시도 종료! 아쉽네요");
+                    const addresult = document.createElement("p");
+                    addresult.textContent = `생성 된 숫자는 ${gen_number} 이었습니다`;
+                    document.body.appendChild(addresult);
                     inputDiv.style.display = "none";
                     restartbutton.style.display = "inline-block";
                 }
