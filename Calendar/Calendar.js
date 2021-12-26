@@ -144,7 +144,7 @@ var day_labeling = function() {
 
 
 //day_of_first(): 입력한 달의 1일의 요일 리턴
-var day_of_first = function() {
+/*var day_of_first = function() {
     var today_Date_div7 = now.getDate()%7;
     var today_index = now.getDay();
     var day_of_first = number_to_Day(now.getDay());
@@ -162,7 +162,9 @@ var day_of_first = function() {
     }
 
     return day_of_first;
-}
+}*/
+//var first = new Date(now.getFullYear(), now.getMonth(), 1);
+//위와 같은 쉬운 방법을 찾아서 더이상 사용하지 않음
 
 //day_to_number(): 문자로 표현된 요일을 숫자로 리턴
 var day_to_number = function(day) {
@@ -216,6 +218,8 @@ var date_labeling = function(firstday, month) {
 };date_labeling(number_to_Day(thismonth1st.getDay()), now.getMonth());
 
 
+
+
 function pre_month(){
     if(month>0){
         $month_year.textContent = `${number_to_Month(month-1)}` + " " + `${year}`;
@@ -235,11 +239,7 @@ function pre_month(){
     day_labeling();
     date_labeling(number_to_Day(pre_month_day.getDay()), month);
 
-    // for (var i = 0 ; i < $realdates.length; i++) {
-    //     $realdates[i].addEventListener("click", function buttonclick(ev){
-    //         alert(ev.target.textContent);
-    //     } , false );
-    //  };
+    changemonth();
 };
 
 function next_month(){
@@ -261,36 +261,20 @@ function next_month(){
     day_labeling();
     date_labeling(number_to_Day(next_month_day.getDay()), month);
 
-    // for (var i = 0 ; i < $realdates.length; i++) {
-    //     $realdates[i].addEventListener("click", function buttonclick(ev){
-    //         alert(ev.target.textContent);
-    //     } , false );
-    //  };
+    changemonth()
 };
 
-
-
-
-
-//날짜 클릭 시 해당 날짜 인식까지는 만듦.
-//인식한 날짜를 $date에 넣기.
-//$day를 위해 요일 인식해서 넣기.
-
-for (var i = 0 ; i < $realdates.length; i++) {
-    $realdates[i].addEventListener("click", function buttonclick(ev){
-        $date.textContent = ev.target.textContent;
-    } , false );
- };
-
-// $sun_to_sat.addEventListner("click", function buttonclick(ev){
-
-// }, false);
-
-    // var i = 0;
-    // var get_date = new Array();
-    // while($realdates.length-i>0){
-    //     get_date[i] = $realdates[i].innerHTML;
-    //     i++;
-    // }
-    // console.log(get_date);
-    // $date.textContent = get_date[3];
+function changemonth(){
+    for (var i = 0; i < $realdates.length; i++) {
+        (function(idx) {
+            $realdates[idx].onclick = function() {
+                $day.textContent = number_to_Day(idx%7);
+            }
+        })(i);
+    }
+    for (var i = 0 ; i < $realdates.length; i++) {
+        $realdates[i].addEventListener("click", function buttonclick(ev){
+            $date.textContent = ev.target.textContent;
+        } , false );
+     };
+};changemonth();
