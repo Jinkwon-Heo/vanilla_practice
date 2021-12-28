@@ -25,7 +25,11 @@ body .left_button{
     left: 20%;
     top: 75%;
 }
-
+body .right_button{
+    position: absolute;
+    right: 20%;
+    top: 75%;
+}
 body .sun_to_sat{
     display: flex;
     align-items: center; /* 수직 정렬 */
