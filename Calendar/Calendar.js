@@ -143,7 +143,7 @@ var day_labeling = function() {
 };day_labeling();
 
 
-//day_of_first(): 입력한 달의 1일의 요일 리턴
+//day_of_first(): 이번 달의 1일의 요일 리턴
 /*var day_of_first = function() {
     var today_Date_div7 = now.getDate()%7;
     var today_index = now.getDay();
@@ -219,7 +219,7 @@ var date_labeling = function(firstday, month) {
 
 
 
-
+//pre_month(), next_month(): 화살표 클릭 시 이전, 다음 달로 넘어가도록 만들어줌
 function pre_month(){
     if(month>0){
         $month_year.textContent = `${number_to_Month(month-1)}` + " " + `${year}`;
@@ -264,6 +264,7 @@ function next_month(){
     changemonth()
 };
 
+//changemonth(): 상단 날짜 바꿔주는 함수
 function changemonth(){
     for (var i = 0; i < $realdates.length; i++) {
         (function(idx) {

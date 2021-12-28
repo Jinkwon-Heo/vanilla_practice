@@ -1,0 +1,42 @@
+html{
+    background-image: url('BG.jpg');
+    background-size: auto;
+}
+body{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+body .day{
+    font-size: 50px;
+    font-weight: bolder;
+}
+body .date{
+    font-size: 50px;
+    font-weight: bolder;
+}
+body .month_year{
+    font-size: 30px;
+    font-weight: bold;
+    animation-fill-mode: backwards;
+}
+body .left_button{
+    position: absolute;
+    left: 20%;
+    top: 75%;
+}
+
+body .sun_to_sat{
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    justify-content: center; /* 수평 정렬 */
+    flex-wrap: wrap;
+    width: 50%;
+    height: 30vh;
+    margin-left: 25%;
+}
+.sun_to_sat span{
+    flex: 1 1 14%;
+    text-align: center;
+    font-size: 20px;
+}
